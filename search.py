@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
-import stat, sys, os, string, commands
+
+import stat
+import sys
+import os
+import string
+import commands
+
 #Записываем в переменную шаблон поиска, введенный пользователем
 try:
     pattern = raw_input("Введите шаблон поиска:\n")
@@ -8,7 +14,7 @@ try:
     commandOutput = commands.getoutput(commandString)
     findResults = string.split(commandOutput, "\n")
     #выводим найденные файлы вместе с правами доступа
-    print "Файлы:"
+    print "Файлы: "
     print commandOutput
     print "================================"
     for file in findResults:
